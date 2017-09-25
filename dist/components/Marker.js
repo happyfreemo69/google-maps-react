@@ -109,7 +109,7 @@
     }, {
       key: 'componentDidUpdate',
       value: function componentDidUpdate(prevProps) {
-        if (this.props.map !== prevProps.map || this.props.position !== prevProps.position || this.props.icon !== prevProps.icon) {
+        if (this.props.map !== prevProps.map || this.props.position !== prevProps.position || this.props.icon !== prevProps.icon || this.props.zIndex !== prevProps.zIndex) {
           if (this.marker) {
             this.marker.setMap(null);
           }
@@ -135,6 +135,7 @@
             mapCenter = _props.mapCenter,
             icon = _props.icon,
             label = _props.label,
+            zIndex = _props.zIndex,
             draggable = _props.draggable,
             title = _props.title;
 
@@ -153,6 +154,8 @@
           icon: icon,
           label: label,
           title: title,
+          zIndex: zIndex,
+          optimized: false,
           draggable: draggable
         };
         this.marker = new google.maps.Marker(pref);
