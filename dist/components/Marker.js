@@ -124,6 +124,23 @@
         }
       }
     }, {
+      key: 'shouldComponentUpdate',
+      value: function shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.position && this.props.position.lat && nextProps.position && nextProps.position.lat && this.props.position.lat!=nextProps.position.lat) {
+          return true;
+        }
+        if (this.props.icon && this.props.icon.url && nextProps.icon && nextProps.icon.url && this.props.icon.url!=nextProps.icon.url) {
+          return true;
+        }
+        if (this.props.icon && this.props.icon.scaledSize && this.props.icon.scaledSize.width && nextProps.icon && nextProps.icon.scaledSize && nextProps.icon.scaledSize.width && this.props.icon.scaledSize.width!=nextProps.icon.scaledSize.width) {
+          return true;
+        }
+        if (this.props.icon && this.props.icon.scaledSize && this.props.icon.scaledSize.height && nextProps.icon && nextProps.icon.scaledSize && nextProps.icon.scaledSize.height && this.props.icon.scaledSize.height!=nextProps.icon.scaledSize.height) {
+          return true;
+        }
+        return false;
+      }
+    }, {
       key: 'renderMarker',
       value: function renderMarker() {
         var _this2 = this;
