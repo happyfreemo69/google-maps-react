@@ -64,7 +64,7 @@ export class Marker extends React.Component {
     if (this.props.icon && this.props.icon.scaledSize && this.props.icon.scaledSize.height && nextProps.icon && nextProps.icon.scaledSize && nextProps.icon.scaledSize.height && this.props.icon.scaledSize.height!=nextProps.icon.scaledSize.height) {
       return true;
     }
-    if (!this.props.map && !this.props.map.getCenter) {
+    if (!this.props.map) {
       return true;
     }
     return false;
