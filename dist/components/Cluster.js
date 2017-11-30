@@ -137,9 +137,9 @@
           }
 
           if (map) {
-            for (var i = 0; i < this.props.markers.length; i++) {
+            var _loop = function _loop() {
 
-              var markerInfo = this.props.markers[i];
+              var markerInfo = _this2.props.markers[i];
 
               var pref = {
                 map: map,
@@ -150,13 +150,22 @@
                 draggable: markerInfo.draggable
               };
 
-              var marker = new google.maps.Marker(pref);
+              marker = new google.maps.Marker(pref);
+
 
               evtNames.forEach(function (e) {
-                marker.addListener(e, _this2.handleEvent(e));
+                if (markerInfo[e]) {
+                  marker.addListener(e, markerInfo[e]);
+                }
               });
 
               markersGoogle.push(marker);
+            };
+
+            for (var i = 0; i < this.props.markers.length; i++) {
+              var marker;
+
+              _loop();
             }
 
             var options = {
@@ -176,18 +185,6 @@
         return this.clusterPromise;
       }
     }, {
-      key: 'handleEvent',
-      value: function handleEvent(evt) {
-        var _this3 = this;
-
-        return function (e) {
-          var evtName = 'on' + (0, _String.camelize)(evt);
-          if (_this3.props[evtName]) {
-            _this3.props[evtName](_this3.props, _this3.cluster, e);
-          }
-        };
-      }
-    }, {
       key: 'render',
       value: function render() {
         return null;
@@ -203,10 +200,6 @@
     styles: _propTypes2.default.array,
     map: _propTypes2.default.object
   };
-
-  evtNames.forEach(function (e) {
-    return Cluster.propTypes[e] = _propTypes2.default.func;
-  });
 
   Cluster.defaultProps = {
     name: 'Cluster'

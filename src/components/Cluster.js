@@ -72,7 +72,9 @@ export class Cluster extends React.Component {
           var marker = new google.maps.Marker(pref);
 
           evtNames.forEach(e => {
-            marker.addListener(e, this.handleEvent(e));
+            if (markerInfo[e]) {
+              marker.addListener(e, markerInfo[e]);
+            }
           });
 
           markersGoogle.push(marker);
@@ -96,15 +98,6 @@ export class Cluster extends React.Component {
     return this.clusterPromise;
   }
 
-  handleEvent(evt) {
-    return (e) => {
-      const evtName = `on${camelize(evt)}`
-      if (this.props[evtName]) {
-        this.props[evtName](this.props, this.cluster, e);
-      }
-    }
-  }
-
   render() {
     return null;
   }
@@ -116,8 +109,6 @@ Cluster.propTypes = {
   styles: PropTypes.array,
   map: PropTypes.object
 }
-
-evtNames.forEach(e => Cluster.propTypes[e] = PropTypes.func)
 
 Cluster.defaultProps = {
   name: 'Cluster'

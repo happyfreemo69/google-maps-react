@@ -12,7 +12,8 @@ const WithMarkers = React.createClass({
                     {
                       name: 'SOMA',
                       title: 'The marker`s title will appear as a tooltip.',
-                      position: {lat: 37.778519, lng: -122.405640}
+                      position: {lat: 37.778519, lng: -122.405640},
+                      click: function() {console.log('Test click')}
                     },
                     {
                       name: 'SOMA 2',
@@ -24,6 +25,7 @@ const WithMarkers = React.createClass({
                       position: {lat: 37.759703, lng: -122.428093}
                     }
                   ];
+
     if (!this.props.loaded) {
       return <div>Loading...</div>
     }
