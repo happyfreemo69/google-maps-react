@@ -15,6 +15,11 @@ const WithMarkers = React.createClass({
                       position: {lat: 37.778519, lng: -122.405640}
                     },
                     {
+                      name: 'SOMA 2',
+                      title: 'The marker`s title will appear as a tooltip.',
+                      position: {lat: 37.776519, lng: -122.435640}
+                    },
+                    {
                       name: 'Dolores park',
                       position: {lat: 37.759703, lng: -122.428093}
                     }
@@ -29,7 +34,13 @@ const WithMarkers = React.createClass({
           className={'map'}
           zoom={14}>
           <Cluster markers={markers}
-                  imagePath="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Brad_Pitt_June_2014_%28cropped%29.jpg/200px-Brad_Pitt_June_2014_%28cropped%29.jpg"/>
+                  styles={[{
+                    url: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m1.png',
+                    height: 52,
+                    width: 52,
+                    anchor: [-26, -26],
+                    textSize: 0.001
+                  }]}/>
       </Map>
     )
   }

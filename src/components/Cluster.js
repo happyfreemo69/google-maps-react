@@ -80,7 +80,8 @@ export class Cluster extends React.Component {
         }
 
         var options = {
-          imagePath: this.props.imagePath
+          imagePath: this.props.imagePath,
+          styles: ((this.props.styles) ? this.props.styles : [])
         };
 
         var markerCluster = new MarkerClusterer(map, markersGoogle, options);
@@ -111,6 +112,8 @@ export class Cluster extends React.Component {
 
 Cluster.propTypes = {
   markers: PropTypes.array,
+  imagePath: PropTypes.string,
+  styles: PropTypes.array,
   map: PropTypes.object
 }
 

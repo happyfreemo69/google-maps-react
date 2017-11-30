@@ -160,7 +160,8 @@
             }
 
             var options = {
-              imagePath: this.props.imagePath
+              imagePath: this.props.imagePath,
+              styles: this.props.styles ? this.props.styles : []
             };
 
             var markerCluster = new MarkerClusterer(map, markersGoogle, options);
@@ -198,6 +199,8 @@
 
   Cluster.propTypes = {
     markers: _propTypes2.default.array,
+    imagePath: _propTypes2.default.string,
+    styles: _propTypes2.default.array,
     map: _propTypes2.default.object
   };
 
