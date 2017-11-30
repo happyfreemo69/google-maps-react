@@ -109,7 +109,7 @@
     }, {
       key: 'componentDidUpdate',
       value: function componentDidUpdate(prevProps) {
-        if (this.props.map !== prevProps.map || this.props.position !== prevProps.position || this.props.icon !== prevProps.icon || this.props.zIndex !== prevProps.zIndex) {
+        if (this.props.map !== prevProps.map || this.props.position !== prevProps.position || this.props.icon !== prevProps.icon) {
           if (this.marker) {
             this.marker.setMap(null);
           }
@@ -124,23 +124,6 @@
         }
       }
     }, {
-      key: 'shouldComponentUpdate',
-      value: function shouldComponentUpdate(nextProps, nextState) {
-        if (this.props.position && this.props.position.lat && nextProps.position && nextProps.position.lat && this.props.position.lat!=nextProps.position.lat) {
-          return true;
-        }
-        if (this.props.icon && this.props.icon.url && nextProps.icon && nextProps.icon.url && this.props.icon.url!=nextProps.icon.url) {
-          return true;
-        }
-        if (this.props.icon && this.props.icon.scaledSize && this.props.icon.scaledSize.width && nextProps.icon && nextProps.icon.scaledSize && nextProps.icon.scaledSize.width && this.props.icon.scaledSize.width!=nextProps.icon.scaledSize.width) {
-          return true;
-        }
-        if (this.props.icon && this.props.icon.scaledSize && this.props.icon.scaledSize.height && nextProps.icon && nextProps.icon.scaledSize && nextProps.icon.scaledSize.height && this.props.icon.scaledSize.height!=nextProps.icon.scaledSize.height) {
-          return true;
-        }
-        return false;
-      }
-    }, {
       key: 'renderMarker',
       value: function renderMarker() {
         var _this2 = this;
@@ -152,7 +135,6 @@
             mapCenter = _props.mapCenter,
             icon = _props.icon,
             label = _props.label,
-            zIndex = _props.zIndex,
             draggable = _props.draggable,
             title = _props.title;
 
@@ -171,8 +153,6 @@
           icon: icon,
           label: label,
           title: title,
-          zIndex: zIndex,
-          optimized: false,
           draggable: draggable
         };
         this.marker = new google.maps.Marker(pref);

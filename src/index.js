@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {camelize} from './lib/String';
 import {makeCancelable} from './lib/cancelablePromise';
 import invariant from 'invariant';
+import MarkerClusterer from 'js-marker-clusterer';
 
 const mapStyles = {
   container: {
@@ -45,6 +46,7 @@ const evtNames = [
 
 export {wrapper as GoogleApiWrapper} from './GoogleApiComponent';
 export {Marker} from './components/Marker';
+export {Cluster} from './components/Cluster';
 export {InfoWindow} from './components/InfoWindow';
 export {HeatMap} from './components/HeatMap';
 export {Polygon} from './components/Polygon';

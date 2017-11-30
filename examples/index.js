@@ -15,6 +15,10 @@ const routeMap = {
     name: 'Marker',
     component: require('./components/withMarkers').default
   },
+  'clusters': {
+    name: 'Clusters',
+    component: require('./components/withClusters').default
+  },
   'clickable_markers': {
     name: 'Clickable markers',
     component: require('./components/clickableMarkers').default

@@ -78,6 +78,6 @@ export const Container = React.createClass({
 })
 
 export default GoogleApiWrapper({
-  apiKey: __GAPI_KEY__,
+  apiKey: 'AIzaSyC4mLsrQy5349gCEN7QYKmu7pisrI_Kv70',
   libraries: ['places','visualization']
 })(Container)
