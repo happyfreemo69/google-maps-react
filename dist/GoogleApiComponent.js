@@ -100,7 +100,7 @@
         return function (WrappedComponent) {
             var apiKey = options.apiKey;
             var libraries = options.libraries || ['places'];
-            var version = options.version || '3';
+            var version = options.version || '3.29';
             var createCache = options.createCache || defaultCreateCache;
 
             var Wrapper = function (_React$Component) {
@@ -139,7 +139,7 @@
 
                         return _react2.default.createElement(
                             'div',
-                            null,
+                            { className: 'wrapperMap' },
                             _react2.default.createElement(WrappedComponent, props),
                             _react2.default.createElement('div', { ref: 'map' })
                         );
