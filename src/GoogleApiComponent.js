@@ -25,7 +25,7 @@ const defaultCreateCache = (options) => {
 export const wrapper = (options) => (WrappedComponent) => {
     const apiKey = options.apiKey;
     const libraries = options.libraries || ['places'];
-    const version = options.version || '3';
+    const version = options.version || '3.29';
     const createCache = options.createCache || defaultCreateCache;
 
     class Wrapper extends React.Component {
@@ -55,7 +55,7 @@ export const wrapper = (options) => (WrappedComponent) => {
             });
 
             return (
-                <div>
+                <div className="wrapperMap">
                     <WrappedComponent {...props}/>
                     <div ref='map'/>
                 </div>
