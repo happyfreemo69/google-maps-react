@@ -139,7 +139,7 @@
 
                         return _react2.default.createElement(
                             'div',
-                            { className: 'wrapperMap' },
+                            { className: 'wrapper-map' },
                             _react2.default.createElement(WrappedComponent, props),
                             _react2.default.createElement('div', { ref: 'map' })
                         );

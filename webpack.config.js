@@ -32,17 +32,7 @@ var config = getConfig({
       if (err) {
         return cb(err);
       }
-      cb(null, {
-        'index.html': context.defaultTemplate(),
-        // 'readme.html': context.defaultTemplate({
-        //   html: `<div id="readme">
-        //           ${marked(data.toString('utf-8'))}
-        //         </div>`,
-        //   metaTags: {
-        //     bootApp: false
-        //   }
-        // })
-      })
+      cb(null, {'index.html': context.defaultTemplate()})
     })
   }
 });
@@ -61,7 +51,6 @@ const defines =
     __NODE_ENV__: JSON.stringify(env.NODE_ENV),
     __IS_DEV__: isDev
   })
-
 
 config.externals = {
   'window.google': true
