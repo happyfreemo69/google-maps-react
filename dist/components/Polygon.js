@@ -107,7 +107,7 @@
     }, {
       key: 'componentDidUpdate',
       value: function componentDidUpdate(prevProps) {
-        if (this.props.map !== prevProps.map) {
+        if (this.props.map !== prevProps.map || this.props.paths !== prevProps.paths || this.props.strokeColor !== prevProps.strokeColor || this.props.fillColor !== prevProps.fillColor) {
           if (this.polygon) {
             this.polygon.setMap(null);
             this.renderPolygon();
