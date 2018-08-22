@@ -40,6 +40,13 @@ export class Polygon extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.paths && nextProps.paths && JSON.stringify(this.props.paths)!=JSON.stringify(nextProps.paths)) {
+      return true;
+    }
+    return false;
+  }
+
   renderPolygon() {
     const {
       map,

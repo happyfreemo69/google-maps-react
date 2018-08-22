@@ -122,6 +122,14 @@
         }
       }
     }, {
+      key: 'shouldComponentUpdate',
+      value: function shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.paths && nextProps.paths && JSON.stringify(this.props.paths) != JSON.stringify(nextProps.paths)) {
+          return true;
+        }
+        return false;
+      }
+    }, {
       key: 'renderPolygon',
       value: function renderPolygon() {
         var _this2 = this;
