@@ -44,6 +44,9 @@ export class Polygon extends React.Component {
     if (this.props.paths && nextProps.paths && JSON.stringify(this.props.paths)!=JSON.stringify(nextProps.paths)) {
       return true;
     }
+    if (!this.props.map) {
+      return true;
+    }
     return false;
   }
 
