@@ -1,3 +1,32 @@
+# Forked repository for Citylity
+
+This repository was forked to solve certains issues in the original google-maps-react component, which include:
+
+## Managing the z-index of the markers
+
+In the original plugin we could not change the z-index of the markers. That became a problem because one of the features was that as soon as we click on a marker it would appear on top with a shadow.
+
+The solution can be found on the commit: [https://github.com/happyfreemo69/google-maps-react/commit/8982030a6ec2a5e83a623bd365a0258a590365fc](https://github.com/happyfreemo69/google-maps-react/commit/8982030a6ec2a5e83a623bd365a0258a590365fc)
+
+## Cluster
+
+At some point there was the idea of using clusters for the markers. The idea was discarded but now this repository has the possibility of creating them [https://developers.google.com/maps/documentation/javascript/marker-clustering](https://developers.google.com/maps/documentation/javascript/marker-clustering).
+
+The object works exactly like a `<Marker>` and it can be seen in the `src/components/Cluster.js` file.
+
+## Updating markers and polygons
+
+One big problem with this component was that the markers and polygons did not re-render when some of their parameters changed. We had to add several conditions to the `componentDidUpdate` function of the `<Marker>` and `<Polygon>` object. These include changes in the position, style or icon.
+
+## Additional changes
+
+Some minor improvements were:
+
+- Added the `zoomControl` property from Google Maps
+- Improved the rendering refresh of markers
+- Changed the old version of Google Maps to 3.29
+
+---
 
 <p align="center">
   <img src="resources/readme/fullstackreact-google-maps-tutorial.png" alt="Fullstack React Google Maps Tutorial" />
