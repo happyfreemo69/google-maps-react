@@ -58,9 +58,9 @@
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "prop-types": "^15.5.8",
-    "react": "^15.0.0",
+    "react": "^18.2.0",
     "react-addons-test-utils": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "react-dom": "^18.2.0",
     "react-github-fork-ribbon": "^0.4.3",
     "react-router": "^2.4.0",
     "sinon": "^1.17.3",
@@ -69,8 +69,8 @@
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "react": "~0.14.8 || ^15.0.0",
-    "react-dom": "~0.14.8 || ^15.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "history": "^3.0.0",
