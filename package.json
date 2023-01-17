@@ -62,7 +62,8 @@
     "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.13.0"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -72,5 +73,8 @@
     "history": "^3.0.0",
     "invariant": "^2.2.1",
     "js-marker-clusterer": "^1.0.0"
-  }
+  },
+  "files" :  [
+    "dist"
+  ]
 }
