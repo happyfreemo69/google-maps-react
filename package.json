@@ -73,6 +73,5 @@
     "history": "^3.0.0",
     "invariant": "^2.2.1",
     "js-marker-clusterer": "^1.0.0"
-  },
-  "files": [ "/dist" ]
+  }
 }
