@@ -74,4 +74,7 @@
     "invariant": "^2.2.1",
     "js-marker-clusterer": "^1.0.0"
   }
+  "files":[
+	"dist/"
+	]
 }
