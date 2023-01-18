@@ -12,6 +12,6 @@ examples/
 public/
 scripts/
 resources/
+README.md
 Makefile
 webpack.config.js
-!dist/*
