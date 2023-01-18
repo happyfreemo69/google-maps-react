@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../lib/String'], factory);
+    define(['exports', 'react', 'prop-types', '../lib/String'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../lib/String'));
+    factory(exports, require('react'), require('rpop-types'), require('../lib/String'));
   } else {
     var mod = {
       exports: {}
@@ -10,7 +10,7 @@
     factory(mod.exports, global.react, global.String);
     global.Polygon = mod.exports;
   }
-})(this, function (exports, _react, _String) {
+})(this, function (exports, _react, _propTypes, _String) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -19,6 +19,7 @@
   exports.Polygon = undefined;
 
   var _react2 = _interopRequireDefault(_react);
+  var _propTypes2 = _interopRequireDefault(_propTypes);
 
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -198,16 +199,16 @@
   }(_react2.default.Component);
 
   Polygon.propTypes = {
-    paths: PropTypes.array,
-    strokeColor: PropTypes.string,
-    strokeOpacity: PropTypes.number,
-    strokeWeight: PropTypes.number,
-    fillColor: PropTypes.string,
-    fillOpacity: PropTypes.number
+    paths: _propTypes2.default.array,
+    strokeColor: _propTypes2.default.string,
+    strokeOpacity: _propTypes2.default.number,
+    strokeWeight: _propTypes2.default.number,
+    fillColor: _propTypes2.default.string,
+    fillOpacity: _propTypes2.default.number
   };
 
   evtNames.forEach(function (e) {
-    return Polygon.propTypes[e] = PropTypes.func;
+    return Polygon.propTypes[e] = _propTypes2.default.func;
   });
 
   Polygon.defaultProps = {
