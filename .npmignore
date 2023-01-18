@@ -14,3 +14,4 @@ scripts/
 resources/
 Makefile
 webpack.config.js
+!dist/*
