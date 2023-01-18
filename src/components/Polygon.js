@@ -1,4 +1,5 @@
-import React, { PropTypes as T } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { camelize } from '../lib/String'
 const evtNames = ['click', 'mouseout', 'mouseover'];

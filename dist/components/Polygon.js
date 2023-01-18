@@ -198,16 +198,16 @@
   }(_react2.default.Component);
 
   Polygon.propTypes = {
-    paths: _react.PropTypes.array,
-    strokeColor: _react.PropTypes.string,
-    strokeOpacity: _react.PropTypes.number,
-    strokeWeight: _react.PropTypes.number,
-    fillColor: _react.PropTypes.string,
-    fillOpacity: _react.PropTypes.number
+    paths: PropTypes.array,
+    strokeColor: PropTypes.string,
+    strokeOpacity: PropTypes.number,
+    strokeWeight: PropTypes.number,
+    fillColor: PropTypes.string,
+    fillOpacity: PropTypes.number
   };
 
   evtNames.forEach(function (e) {
-    return Polygon.propTypes[e] = _react.PropTypes.func;
+    return Polygon.propTypes[e] = PropTypes.func;
   });
 
   Polygon.defaultProps = {
