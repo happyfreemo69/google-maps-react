@@ -11,3 +11,5 @@ src/
 examples/
 public/
 scripts/
+Makefile
+webpack.config.js
