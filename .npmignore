@@ -11,5 +11,6 @@ src/
 examples/
 public/
 scripts/
+resources/
 Makefile
 webpack.config.js
