@@ -2,7 +2,7 @@
   if (typeof define === "function" && define.amd) {
     define(['exports', 'react', 'prop-types', '../lib/String'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('rpop-types'), require('../lib/String'));
+    factory(exports, require('react'), require('prop-types'), require('../lib/String'));
   } else {
     var mod = {
       exports: {}
